@@ -76,7 +76,7 @@ class BookCollection:
             for index, book in enumerate(
                 found_books, 1
             ):  # if bppk found, start from index 1
-                reading_status = "Read" if book["read"] else ["Unread"]
+                reading_status = "Read" if book["read"] else "Unread"
                 print(
                     f"{index}. {book["title"]} by {book["author"]} ({book["year"]} - {book["genre"]} - {reading_status})"
                 )
@@ -115,7 +115,7 @@ class BookCollection:
             return
         print("Your Book Collection: ")
         for index, book in enumerate(self.book_list, 1):
-            reading_status = "Read" if book["read"] else ["Unread"]
+            reading_status = "Read" if book["read"] else "Unread"
             print(
                 f"{index}. {book["title"]} by {book["author"]}  ({book["year"]})- ({book["genre"]}) [ {reading_status}]"
             )
@@ -132,7 +132,7 @@ class BookCollection:
         print(f"Reading Progress: {completion_rate:.2f}%\n")
 
     def start_application(self):
-        """Run the main application loop with a user friendly menu interface."""
+        """Run the main application loop with a user-friendly menu interface."""
         while True:
             print("Welcome to your book collection manager.")
             print("1. Add new book")
